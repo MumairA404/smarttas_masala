@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.smarttas.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="176.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klassen Overzicht" wrappingWidth="288.60003662109375">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="82.0" fitWidth="103.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/logo%20stt_files/thumbnail_Screenshot%202025-11-17%20143315(1).png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="229.0" layoutY="245.0" style="-fx-border-color: #02ddff; -fx-background-color: #FFFFFF;">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.007843137718737125" green="0.8666666746139526" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <BottomNavigationButton layoutX="91.0" layoutY="24.0" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
+      <BottomNavigationButton layoutX="162.0" layoutY="25.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE" />
+      <Button layoutX="274.0" layoutY="290.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Submit" textFill="WHITE">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.007843137718737125" green="0.8666666746139526" blue="1.0" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </Button>
+      <Text fill="WHITE" layoutX="328.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="aanta leerlingen" wrappingWidth="111.20000000000005">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="157.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bekijk leerlingen" wrappingWidth="120.58477783203125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="40.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="klas" wrappingWidth="70.184814453125">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
