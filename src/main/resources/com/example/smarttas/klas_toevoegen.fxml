@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="181.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klas toevoegen" wrappingWidth="193.38482666015625">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="82.0" fitWidth="103.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/logo%20stt_files/thumbnail_Screenshot%202025-11-17%20143315(1).png" />
+         </image>
+      </ImageView>
+      <BottomNavigationButton layoutX="91.0" layoutY="24.0" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
+      <BottomNavigationButton layoutX="162.0" layoutY="25.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE" />
+      <BottomNavigationButton layoutX="278.0" layoutY="26.0" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: #000000;" text="uitloggen" textFill="WHITE" />
+      <Button layoutX="220.0" layoutY="314.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="103.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="toevoegen" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="222.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klas naam" wrappingWidth="111.20000000000005">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="189.0" layoutY="186.0" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" />
+      <TextField layoutX="189.0" layoutY="269.0" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" />
+      <Text fill="WHITE" layoutX="198.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aantal leerlingen" wrappingWidth="148.79997558593755">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
