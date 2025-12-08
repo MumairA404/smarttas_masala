@@ -20,7 +20,7 @@
         <BottomNavigationButton layoutX="91.0" layoutY="24.0" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
         <BottomNavigationButton layoutX="162.0" layoutY="25.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE" />
         <BottomNavigationButton layoutX="514.0" layoutY="24.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #000000;" text="Uitloggen" textFill="WHITE" />
-        <Button layoutX="141.0" layoutY="282.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="103.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Toevoegen" textFill="WHITE" />
+        <Button layoutX="258.0" layoutY="293.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="103.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Toevoegen" textFill="WHITE" />
         <Text fill="WHITE" layoutX="175.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling toevoegen" wrappingWidth="270.85137939453125">
             <font>
                 <Font name="System Bold" size="28.0" />
