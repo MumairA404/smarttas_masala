@@ -10,6 +10,9 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;"
             xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+            fx:controller="com.example.smarttas.controllers.LeerlingOverzichtController"
+
+
     <children>
         <Text fill="WHITE" layoutX="119.0" layoutY="91.0" text="LEERLINGEN OVERZICHT">
             <font>
@@ -17,11 +20,12 @@
             </font>
         </Text>
 
-        <ImageView fitHeight="82.0" fitWidth="103.0" layoutY="2.0" preserveRatio="true">
+        <ImageView fitHeight="82.0" fitWidth="103.0" preserveRatio="true">
             <image>
-                <Image url="@../../../../../../../../Downloads/logo%20stt_files/thumbnail_Screenshot%202025-11-17%20143315(1).png" />
+                <Image url="/image/smarttas_logo.png" />
             </image>
         </ImageView>
+
 
         <!-- NAVIGATIE (vervangen door normale JavaFX buttons) -->
         <Button layoutX="91.0" layoutY="24.0" prefHeight="25.0" prefWidth="53.0"
