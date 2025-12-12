@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button layoutX="258.0" layoutY="293.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="103.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Toevoegen" textFill="WHITE" />
+        <Text fill="WHITE" layoutX="175.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leerling toevoegen" wrappingWidth="270.85137939453125">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Text>
+        <TextField layoutX="144.0" layoutY="172.0" prefHeight="24.0" prefWidth="130.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="152.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voornaam" wrappingWidth="67.33333333333337" />
+        <TextField layoutX="336.0" layoutY="172.0" prefHeight="24.0" prefWidth="130.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </TextField>
+        <Text fill="WHITE" layoutX="344.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Achternaam" wrappingWidth="67.33333333333337" />
+      <Text fill="WHITE" layoutX="152.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klas" wrappingWidth="67.33333333333337" />
+      <ChoiceBox layoutX="144.0" layoutY="236.0" prefHeight="25.0" prefWidth="328.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+      <Button layoutX="137.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
+      <Button layoutX="206.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE" />
+      <Button layoutX="500.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Uitloggen" textFill="WHITE" />
+      <ImageView fitHeight="98.0" fitWidth="130.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/EVI-logo.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

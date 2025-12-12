@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Text fill="WHITE" layoutX="262.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="78.85150146484375">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="225.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registreer" wrappingWidth="149.33333333333337">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="123.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wachtwoord" wrappingWidth="110.85150146484375">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <Button layoutX="254.0" layoutY="360.0" mnemonicParsing="false" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Registreer" textFill="WHITE" />
+        <Text fill="WHITE" layoutX="123.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Geboorte-datum" wrappingWidth="110.85150146484375">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="123.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="110.85150146484375">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="123.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voornaam" wrappingWidth="110.85150146484375">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="327.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Achternaam" wrappingWidth="110.85150146484375">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="151.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registreer je als docent om toegang te hebben tot SmartTas" wrappingWidth="299.3333333333335">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <TextField layoutX="121.0" layoutY="159.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+        <TextField layoutX="327.0" layoutY="159.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+        <TextField layoutX="121.0" layoutY="214.0" prefHeight="28.0" prefWidth="359.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+        <TextField layoutX="123.0" layoutY="269.0" prefHeight="28.0" prefWidth="95.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+        <TextField layoutX="252.0" layoutY="269.0" prefHeight="28.0" prefWidth="95.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+        <TextField layoutX="383.0" layoutY="269.0" prefHeight="28.0" prefWidth="95.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+      <PasswordField layoutX="121.0" layoutY="317.0" prefHeight="25.0" prefWidth="352.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+      <Button layoutX="136.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
+      <Button layoutX="210.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE" />
+      <ImageView fitHeight="107.0" fitWidth="124.0" layoutX="-3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/EVI-logo.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
