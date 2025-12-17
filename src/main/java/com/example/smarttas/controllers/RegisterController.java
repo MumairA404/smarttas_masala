@@ -1,8 +1,11 @@
 package com.example.smarttas.controllers;
 import javafx.fxml.FXML;
 
-public class RegisterController {
 
+
+
+
+public class RegisterController {
 
     @FXML
     public void initialize(){

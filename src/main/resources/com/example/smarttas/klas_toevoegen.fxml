@@ -10,8 +10,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;"
-            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
-            fx:controller="com.example.smarttas.controllers.KlasToevoegenController"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.smarttas.controllers.KlastoevoegenController">
     <children>
 
         <Text fill="WHITE" layoutX="181.0" layoutY="116.0" text="Klas toevoegen">

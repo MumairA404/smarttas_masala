@@ -7,7 +7,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.smarttas.controllers.HomeController">
    <children>
       <Text fill="WHITE" layoutX="122.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hier kan je de overzicht bekijken van de klassen en de leerlingen die hun telefoons in hun SmartTas hebben gestopt." wrappingWidth="446.8514404296875">
          <font>
