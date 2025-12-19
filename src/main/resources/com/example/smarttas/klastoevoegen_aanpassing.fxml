@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttas.controllers.KlastoevoegenController">
+
+    <children>
+
+        <Text fill="WHITE" layoutX="181.0" layoutY="116.0" text="Klas toevoegen">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Text>
+
+        <!-- Image tijdelijk weg zodat SceneBuilder niet crasht -->
+        <ImageView fitHeight="82.0" fitWidth="103.0" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../OneDrive/Documents/GitHub/smarttas_masala/src/main/resources/image/smarttas_logo.png" />
+         </image></ImageView>
+
+        <Button layoutX="91.0" layoutY="24.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
+
+        <Button layoutX="162.0" layoutY="25.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE" />
+
+        <Button layoutX="278.0" layoutY="26.0" style="-fx-background-color: #000000;" text="uitloggen" textFill="WHITE" />
+
+        <Button layoutX="220.0" layoutY="314.0" style="-fx-background-color: #2b2b2b;                        -fx-border-radius: 5px;                        -fx-border-color: #78a0ff;" text="toevoegen" textFill="WHITE" />
+
+        <Text fill="WHITE" layoutX="222.0" layoutY="165.0" text="Klas naam">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+
+        <TextField layoutX="189.0" layoutY="186.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b;                           -fx-border-color: #78a0ff;                           -fx-border-radius: 5px;" />
+
+        <Text fill="WHITE" layoutX="198.0" layoutY="246.0" text="Aantal leerlingen">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+
+        <TextField layoutX="189.0" layoutY="269.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b;                           -fx-border-color: #78a0ff;                           -fx-border-radius: 5px;" />
+
+    </children>
+</AnchorPane>

@@ -9,6 +9,6 @@ public class LeerlingtoevoegenController {
 
     @FXML
     public void initialize(){
-            System.out.println("LeerlingtoevoegenController");
+            System.out.println(LeerlingtoevoegenController);
     }
 }
