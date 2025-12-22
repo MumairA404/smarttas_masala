@@ -59,7 +59,7 @@
               mnemonicParsing="false"
               style="-fx-text-fill: white; -fx-background-color: #000000;"
               text="Home"
-              onAction="#handleHom"/>
+              onAction="#handleHome"/>
       <Button fx:id="klassenButton"
               layoutX="201.0"
               layoutY="27.0"

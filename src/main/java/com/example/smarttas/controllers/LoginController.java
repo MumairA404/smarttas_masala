@@ -35,11 +35,11 @@ public class LoginController {
         System.out.println("Password " + password);
     }
     @FXML
-    private void handleHome(){
+    private void handleHome (){
         System.out.println("Home geklikt");
     }
     @FXML
     private void handleKlassen() {
-        System.out.println("klassenoverzicht geklikt");
+        System.out.println("Klassenoverzicht geklikt");
     }
 }

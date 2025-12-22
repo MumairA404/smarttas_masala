@@ -40,9 +40,30 @@
               text="Bekijk"
               textFill="WHITE"
               onAction="#handleBekijk"/>
-      <Button layoutX="122.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />
-      <Button layoutX="186.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE" />
-      <Button layoutX="500.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="UItloggen" textFill="WHITE" />
+      <Button fx:id="homeButton"
+              layoutX="122.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="Home"
+              textFill="WHITE"
+              onAction="#handleHome"/>
+      <Button fx:id="klassenButton"
+              layoutX="186.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="Klassenoverzicht"
+              textFill="WHITE"
+              onAction="#handleKlassen"/>
+      <Button fx:id="logoutButton"
+              layoutX="500.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="UItloggen"
+              textFill="WHITE"
+              onAction="#handleLogout"/>
       <ImageView fitHeight="88.0" fitWidth="120.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/EVI-logo.png" />

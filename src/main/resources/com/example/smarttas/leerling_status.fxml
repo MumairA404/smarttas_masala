@@ -11,8 +11,10 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;"
             xmlns="http://javafx.com/javafx/25"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:id="com.example.smarttas.controllers">
+            fx:controller="com.example.smarttas.controllers.LeerlingstatusController">
+
     <children>
+
         <Text fill="WHITE" layoutX="100.0" layoutY="35.0" text="LEERLING - SmartTas">
             <font>
                 <Font name="System Bold" size="22.0" />
@@ -62,11 +64,7 @@
         <Text fill="WHITE" layoutX="430.0" layoutY="155.0" text="Telefoon zit in de tas" />
         <Rectangle fill="#dc3545" height="20.0" layoutX="400.0" layoutY="170.0" width="20.0" />
         <Text fill="WHITE" layoutX="430.0" layoutY="185.0" text="Telefoon zit NIET in de tas" />
-        <ImageView fitHeight="99.0" fitWidth="103.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../img/EVI-logo.png" />
-            </image>
-        </ImageView>
+
     </children>
 </AnchorPane>
 
