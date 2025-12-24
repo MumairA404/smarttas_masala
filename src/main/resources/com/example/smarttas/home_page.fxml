@@ -7,29 +7,26 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;"
-            xmlns="http://javafx.com/javafx/25"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.smarttas.controllers.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text fill="WHITE" layoutX="122.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hier kan je de overzicht bekijken van de klassen en de leerlingen die hun telefoons in hun SmartTas hebben gestopt." wrappingWidth="446.8514404296875">
+      <Text fill="WHITE" layoutX="369.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hier kan je de overzicht bekijken van de klassen en de leerlingen die hun telefoons in hun SmartTas hebben gestopt." wrappingWidth="572.8514404296875">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="122.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="412.8514404296875">
+      <Text fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="540.8514404296875">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="119.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KLASSEN OVERZICHT" wrappingWidth="196.8514404296875">
+      <Text fill="WHITE" layoutX="369.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KLASSEN OVERZICHT" wrappingWidth="227.51812744140625">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Text>
-      <Text fill="#78a0ff" layoutX="119.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekijk hier de klassen van uw school" wrappingWidth="232.184814453125">
+      <Text fill="#78a0ff" layoutX="369.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekijk hier de klassen van uw school" wrappingWidth="305.51812744140625">
          <font>
-            <Font size="14.0" />
+            <Font size="19.0" />
          </font>
       </Text>
       <Button fx:id="bekijkButton"
