@@ -11,5 +11,7 @@ module com.example.smarttas {
     requires java.sql;
 
     opens com.example.smarttas to javafx.fxml;
+    opens com.example.smarttas.controllers to javafx.fxml;
+
     exports com.example.smarttas;
 }
