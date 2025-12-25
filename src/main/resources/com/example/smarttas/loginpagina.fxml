@@ -1,43 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>-->
-
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttas.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: #000000;"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.smarttas.controllers.LoginController">
+
     <children>
-        <Text fill="WHITE" layoutX="233.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="103.0">
+
+        <Text fill="WHITE" layoutX="587.0" layoutY="175.0" text="Login">
             <font>
-                <Font name="System Bold" size="30.0" />
+                <Font name="System Bold" size="40.0" />
             </font>
         </Text>
-        <ImageView fitHeight="82.0" fitWidth="103.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+
+        <ImageView fitHeight="178.0" fitWidth="202.0" layoutY="2.0" preserveRatio="true">
             <image>
                 <Image url="@../../../img/EVI-logo.png" />
             </image>
         </ImageView>
-        <Text fill="WHITE" layoutX="231.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="70.184814453125">
+
+        <Text fill="WHITE" layoutX="517.0" layoutY="278.0" text="E-mail">
             <font>
-                <Font size="18.0" />
+                <Font size="22.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="229.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wachtwoord" wrappingWidth="110.85150146484375">
+
+        <Text fill="WHITE" layoutX="517.0" layoutY="408.0" text="Wachtwoord">
             <font>
-                <Font size="18.0" />
+                <Font size="22.0" />
             </font>
         </Text>
-<!--        <BottomNavigationButton layoutX="103.0" layoutY="25.0" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />-->
-<!--        <BottomNavigationButton layoutX="157.0" layoutY="25.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE" />-->
-        <Button layoutX="272.0" layoutY="311.0" mnemonicParsing="false" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" text="Login" textFill="WHITE" />
-        <TextField layoutX="229.0" layoutY="172.0" style="-fx-border-radius: 5px; -fx-background-color: #2b2b2b; -fx-border-color: #78a0ff;" styleClass="-fx-border-radius" />
-        <TextField layoutX="229.0" layoutY="253.0" style="-fx-border-radius: 5px; -fx-background-color: #2b2b2b; -fx-border-color: #78a0ff;" styleClass="-fx-border-radius" />
-      <Button layoutX="128.0" layoutY="27.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-background-color: #000000;" text="Home" />
-      <Button layoutX="201.0" layoutY="27.0" mnemonicParsing="false" style="-fx-text-fill: white; -fx-background-color: #000000;" text="Klassenoverzicht" />
+
+        <Button layoutX="564.0" layoutY="563.0" prefHeight="40.0" prefWidth="151.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;"
+                text="Login" textFill="WHITE" />
+
+        <TextField layoutX="517.0" layoutY="300.0" prefHeight="40.0" prefWidth="245.0"
+                   style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px; -fx-text-fill: white;" />
+
+        <PasswordField layoutX="517.0" layoutY="428.0" prefHeight="40.0" prefWidth="245.0"
+                       style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px; -fx-text-fill: white;">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </PasswordField>
+
+        <Button layoutX="210.0" layoutY="34.0"
+                style="-fx-text-fill: white; -fx-background-color: #000000;" text="Home">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+
+        <Button layoutX="309.0" layoutY="34.0"
+                style="-fx-text-fill: white; -fx-background-color: #000000;" text="Klassenoverzicht">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+
     </children>
 </AnchorPane>
