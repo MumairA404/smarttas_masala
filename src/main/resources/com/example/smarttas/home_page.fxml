@@ -29,20 +29,39 @@
             <Font size="19.0" />
          </font>
       </Text>
-      <Button layoutX="583.0" layoutY="520.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="114.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Bekijk" textFill="WHITE" />
-      <Button layoutX="239.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <Button layoutX="329.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <Button layoutX="1157.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="UItloggen" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <ImageView fitHeight="178.0" fitWidth="202.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="bekijkButton"
+              layoutX="119.0"
+              layoutY="278.0"
+              mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0"
+              style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
+              text="Bekijk"
+              textFill="WHITE"
+              onAction="#handleBekijk"/>
+      <Button fx:id="homeButton"
+              layoutX="122.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="Home"
+              textFill="WHITE"
+              onAction="#handleHome"/>
+      <Button fx:id="klassenButton"
+              layoutX="186.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="Klassenoverzicht"
+              textFill="WHITE"
+              onAction="#handleKlassen"/>
+      <Button fx:id="logoutButton"
+              layoutX="500.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="UItloggen"
+              textFill="WHITE"
+              onAction="#handleLogout"/>
+      <ImageView fitHeight="88.0" fitWidth="120.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/EVI-logo.png" />
          </image>

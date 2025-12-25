@@ -14,32 +14,47 @@
                 <Font name="System Bold" size="42.0" />
             </font>
         </Text>
+        <ImageView fitHeight="82.0" fitWidth="103.0" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../../../OneDrive/Documents/GitHub/smarttas_masala/src/main/resources/image/smarttas_logo.png" />
+            </image></ImageView>
 
-        <ImageView fitHeight="178.0" fitWidth="202.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../img/EVI-logo.png" />
-         </image>
-        </ImageView>
+        <!-- Replaced BottomNavigationButton with normal Buttons -->
+        <Button fx:id="homeButton"
+                layoutX="91.0" layoutY="24.0"
+                prefHeight="25.0" prefWidth="53.0"
+                style="-fx-background-color: #000000;"
+                text="Home"
+                textFill="WHITE"
+                onAction="#handleHome"/>
 
-        <Button layoutX="227.0" layoutY="38.0" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
+        <Button fx:id="klassenButton"
+                layoutX="162.0" layoutY="25.0"
+                prefHeight="25.0" prefWidth="111.0"
+                style="-fx-background-color: #000000;"
+                text="klassenoverzicht"
+                textFill="WHITE"
+                onAction="#handleKlassen"/>
 
-        <Button layoutX="348.0" layoutY="38.0" prefHeight="40.0" prefWidth="176.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
+        <Button fx:id="logoutButton"
+                layoutX="284.0" layoutY="27.0"
+                prefHeight="25.0" prefWidth="111.0"
+                style="-fx-background-color: #000000;"
+                text="uitloggen"
+                textFill="WHITE"
+                onAction="#handleLogout"/>
 
-        <Button layoutX="1128.0" layoutY="40.0" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #000000;" text="uitloggen" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
+        <Button fx:id="bekijkButton1"
+                layoutX="357.0" layoutY="204.0"
+                mnemonicParsing="false"
+                style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
+                text="bekijk"
+                textFill="WHITE"
+                onAction="#handleBekijk1"/>
 
-        <Button layoutX="992.0" layoutY="345.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
-
-        <Text fill="WHITE" layoutX="966.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bekijk leerlingen" wrappingWidth="175.91337402343765">
-            <font><Font name="System Bold" size="22.0" /></font>
+        <Text fill="WHITE" layoutX="328.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="bekijk leerlingen" wrappingWidth="111.2">
+            <font><Font name="System Bold" size="14.0" /></font>
         </Text>
 
         <Text fill="WHITE" layoutX="561.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="aantal leerlingen" wrappingWidth="175.91337402343748">
@@ -86,10 +101,25 @@
             <font><Font name="System Bold" size="20.0" /></font>
         </Text>
 
-        <Button layoutX="992.0" layoutY="411.0" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+        <Button fx:id="bekijkButton2"
+                layoutX="357.0" layoutY="247.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
+                text="bekijk"
+                textFill="WHITE"
+        onAction="#handleBekijk2"/>
 
-        <Button layoutX="992.0" layoutY="488.0" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+        <Button fx:id="bekijkButton3"
+                layoutX="357.0" layoutY="294.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
+                text="bekijk"
+                textFill="WHITE"
+                onAction="#handleBekijk3"/>
 
-        <Button layoutX="992.0" layoutY="561.0" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+        <Button fx:id="bekijkButton4"
+                layoutX="357.0" layoutY="345.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
+                text="bekijk"
+                textFill="WHITE"
+                onAction="#handleBekijk4"/>
     </children>
 </AnchorPane>
