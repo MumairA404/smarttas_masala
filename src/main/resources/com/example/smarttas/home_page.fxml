@@ -29,39 +29,23 @@
             <Font size="19.0" />
          </font>
       </Text>
-      <Button fx:id="bekijkButton"
-              layoutX="119.0"
-              layoutY="278.0"
-              mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0"
-              style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
-              text="Bekijk"
-              textFill="WHITE"
-              onAction="#handleBekijk"/>
-      <Button fx:id="homeButton"
-              layoutX="122.0"
-              layoutY="27.0"
-              mnemonicParsing="false"
-              style="-fx-background-color: #000000;"
-              text="Home"
-              textFill="WHITE"
-              onAction="#handleHome"/>
-      <Button fx:id="klassenButton"
-              layoutX="186.0"
-              layoutY="27.0"
-              mnemonicParsing="false"
-              style="-fx-background-color: #000000;"
-              text="Klassenoverzicht"
-              textFill="WHITE"
-              onAction="#handleKlassen"/>
-      <Button fx:id="logoutButton"
-              layoutX="500.0"
-              layoutY="27.0"
-              mnemonicParsing="false"
-              style="-fx-background-color: #000000;"
-              text="UItloggen"
-              textFill="WHITE"
-              onAction="#handleLogout"/>
-      <ImageView fitHeight="88.0" fitWidth="120.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="bekijkButton" layoutX="369.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleBekijk" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Bekijk" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="homeButton" layoutX="173.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleHome" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="klassenButton" layoutX="271.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleKlassen" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="logoutButton" layoutX="1167.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: #000000;" text="UItloggen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ImageView fitHeight="151.0" fitWidth="173.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../img/EVI-logo.png" />
          </image>
