@@ -7,80 +7,64 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="730.0" prefWidth="1280.0"
-            style="-fx-background-color: #000000;"
-            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
-
-    <children>
-
-        <Text fill="WHITE" layoutX="369.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="Hier kan je de overzicht bekijken van de klassen en de leerlingen die hun telefoons in hun SmartTas hebben gestopt."
-              wrappingWidth="572.8514404296875">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Text>
-
-        <Text fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="Welkom [NAAM] bij de overzicht van SmartTas "
-              wrappingWidth="540.8514404296875">
-            <font>
-                <Font name="System Bold" size="22.0" />
-            </font>
-        </Text>
-
-        <Text fill="WHITE" layoutX="369.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="KLASSEN OVERZICHT"
-              wrappingWidth="227.51812744140625">
-            <font>
-                <Font name="System Bold" size="22.0" />
-            </font>
-        </Text>
-
-        <Text fill="#78a0ff" layoutX="369.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0"
-              text="Bekijk hier de klassen van uw school"
-              wrappingWidth="305.51812744140625">
-            <font>
-                <Font size="19.0" />
-            </font>
-        </Text>
-
-        <Button layoutX="583.0" layoutY="520.0" mnemonicParsing="false"
-                prefHeight="47.0" prefWidth="114.0"
-                style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
-                text="Bekijk" textFill="WHITE" />
-
-        <Button layoutX="239.0" layoutY="40.0" mnemonicParsing="false"
-                style="-fx-background-color: #000000;"
-                text="Home" textFill="WHITE">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Button>
-
-        <Button layoutX="329.0" layoutY="40.0" mnemonicParsing="false"
-                style="-fx-background-color: #000000;"
-                text="Klassenoverzicht" textFill="WHITE">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Button>
-
-        <Button layoutX="1157.0" layoutY="22.0" mnemonicParsing="false"
-                style="-fx-background-color: #000000;"
-                text="UItloggen" textFill="WHITE">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </Button>
-
-        <ImageView fitHeight="178.0" fitWidth="202.0" layoutY="4.0"
-                   pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../img/EVI-logo.png" />
-            </image>
-        </ImageView>
-
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="WHITE" layoutX="369.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hier kan je de overzicht bekijken van de klassen en de leerlingen die hun telefoons in hun SmartTas hebben gestopt." wrappingWidth="572.8514404296875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="540.8514404296875">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="369.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KLASSEN OVERZICHT" wrappingWidth="227.51812744140625">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Text fill="#78a0ff" layoutX="369.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekijk hier de klassen van uw school" wrappingWidth="305.51812744140625">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Button fx:id="bekijkButton"
+              layoutX="119.0"
+              layoutY="278.0"
+              mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0"
+              style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
+              text="Bekijk"
+              textFill="WHITE"
+              onAction="#handleBekijk"/>
+      <Button fx:id="homeButton"
+              layoutX="122.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="Home"
+              textFill="WHITE"
+              onAction="#handleHome"/>
+      <Button fx:id="klassenButton"
+              layoutX="186.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="Klassenoverzicht"
+              textFill="WHITE"
+              onAction="#handleKlassen"/>
+      <Button fx:id="logoutButton"
+              layoutX="500.0"
+              layoutY="27.0"
+              mnemonicParsing="false"
+              style="-fx-background-color: #000000;"
+              text="UItloggen"
+              textFill="WHITE"
+              onAction="#handleLogout"/>
+      <ImageView fitHeight="88.0" fitWidth="120.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/EVI-logo.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
