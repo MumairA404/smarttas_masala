@@ -8,54 +8,78 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;"
-            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
-            fx:controller="com.example.smarttas.controllers.KlasToevoegenController"
+<AnchorPane maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0"
+            prefWidth="600.0"
+            style="-fx-background-color: #000000;"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.smarttas.controllers.KlastoevoegenController">
     <children>
 
-        <Text fill="WHITE" layoutX="181.0" layoutY="116.0" text="Klas toevoegen">
+        <Text fill="WHITE" layoutX="525.0" layoutY="170.0" text="Klas toevoegen">
             <font>
-                <Font name="System Bold" size="24.0" />
+                <Font name="System Bold" size="32.0" />
             </font>
         </Text>
-        <ImageView fitHeight="82.0" fitWidth="103.0" preserveRatio="true">
-            <image>
-                <Image url="/image/smarttas_logo.png" />
-            </image>
-        </ImageView>
 
-        <!-- Navigatie vervangen door gewone JavaFX knoppen -->
-        <Button layoutX="91.0" layoutY="24.0" prefHeight="25.0" prefWidth="53.0"
-                style="-fx-background-color: #000000;" text="Home" textFill="WHITE"/>
+        <Button fx:id="homeButton"
+                layoutX="91.0" layoutY="24.0"
+                prefHeight="25.0" prefWidth="53.0"
+                style="-fx-background-color: #000000;"
+                text="Home"
+                textFill="WHITE"
+                onAction="#onHomeClick"/>
 
-        <Button layoutX="162.0" layoutY="25.0" prefHeight="25.0" prefWidth="111.0"
-                style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE"/>
+        <Button fx:id="klassenoverzichtButton"
+                layoutX="162.0" layoutY="25.0"
+                prefHeight="25.0" prefWidth="111.0"
+                style="-fx-background-color: #000000;"
+                text="klassenoverzicht"
+                textFill="WHITE"
+                onAction="#onKlassenoverzichtClick"/>
 
-        <Button layoutX="278.0" layoutY="26.0" prefHeight="26.0" prefWidth="70.0"
-                style="-fx-background-color: #000000;" text="uitloggen" textFill="WHITE"/>
+        <Button fx:id="uitloggenButton"
+                layoutX="278.0" layoutY="26.0"
+                prefHeight="26.0" prefWidth="70.0"
+                style="-fx-background-color: #000000;"
+                text="uitloggen"
+                textFill="WHITE"
+                 onAction="#onUitloggenClick"/>
 
-        <Button layoutX="220.0" layoutY="314.0" prefHeight="27.0" prefWidth="103.0"
+        <Button fx:id="toevoegenButton"
+                layoutX="220.0" layoutY="314.0"
+                prefHeight="27.0" prefWidth="103.0"
                 style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;"
-                text="toevoegen" textFill="WHITE"/>
+                text="toevoegen"
+                textFill="WHITE"
+                onAction="#onToevoegenClick"/>
 
-        <Text fill="WHITE" layoutX="222.0" layoutY="165.0" text="Klas naam">
+        <Text fill="WHITE" layoutX="580.0" layoutY="279.0" text="Klas naam">
             <font>
-                <Font name="System Bold" size="18.0" />
+                <Font name="System Bold" size="25.0" />
             </font>
         </Text>
 
-        <TextField layoutX="189.0" layoutY="186.0" prefHeight="26.0" prefWidth="178.0"
-                   style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;"/>
+        <TextField fx:id="klasNaamField"
+                layoutX="189.0" layoutY="186.0"
+                prefHeight="26.0" prefWidth="178.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" />
 
-        <TextField layoutX="189.0" layoutY="269.0" prefHeight="26.0" prefWidth="178.0"
-                   style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;"/>
+        <TextField fx:id="aantalLeerlingenField"
+                layoutX="189.0" layoutY="269.0"
+                prefHeight="26.0" prefWidth="178.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" />
 
         <Text fill="WHITE" layoutX="198.0" layoutY="246.0" text="Aantal leerlingen">
             <font>
-                <Font name="System Bold" size="18.0" />
+                <Font name="System Bold" size="25.0" />
             </font>
         </Text>
+      <TextField layoutX="551.0" layoutY="469.0" prefHeight="33.0" prefWidth="189.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px; -fx-text-fill: white;" />
 
     </children>
 </AnchorPane>
