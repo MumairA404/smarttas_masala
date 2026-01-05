@@ -14,8 +14,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="540.8514404296875">
-         <font>
+       <Text fx:id="welkomText" fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="540.8514404296875">         <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Text>
