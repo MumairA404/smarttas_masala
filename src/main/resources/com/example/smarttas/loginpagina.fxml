@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttas.controllers.LoginController">
     <children>
-        <Text fill=com.example.smarttas.controllers.LoginController"WHITE" layoutX="587.0" layoutY="175.0" text="Login">
+        <Text fill="WHITE" layoutX="587.0" layoutY="175.0" text="Login">
             <font><Font name="System Bold" size="40.0" /></font>
         </Text>
 
@@ -19,25 +19,24 @@
             <image><Image url="@../../../img/EVI-logo.png" /></image>
         </ImageView>
 
-        <Text fill="WHITE" layoutX="517.0" layoutY="278.0" text="E-mail">
-            <font><Font size="22.0" /></font>
-        </Text>
+        <TextField fx:id="emailField" layoutX="512.0" layoutY="284.0" prefHeight="28.0" prefWidth="326.0"
+                   style="-fx-border-radius: 5px; -fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
 
-        <Text fill="WHITE" layoutX="515.0" layoutY="431.0" text="Wachtwoord">
-            <font><Font size="22.0" /></font>
-        </Text>
-<!--        <BottomNavigationButton layoutX="103.0" layoutY="25.0" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE" />-->
-<!--        <BottomNavigationButton layoutX="157.0" layoutY="25.0" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE" />-->
-        <Button fx:id="loginButton" layoutX="608.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="38.0" prefWidth="133.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" text="Login" textFill="WHITE" />
-        <TextField fx:id="emailField" layoutX="512.0" layoutY="284.0" prefHeight="11.0" prefWidth="326.0" style="-fx-border-radius: 5px; -fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-text-fill: white;" styleClass="-fx-border-radius" />
-      <Button fx:id="homeButton" layoutX="202.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleHome" style="-fx-text-fill: white; -fx-background-color: #000000;" text="Home">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <Button fx:id="klassenButton" layoutX="296.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleKlassen" style="-fx-text-fill: white; -fx-background-color: #000000;" text="Klassenoverzicht">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <PasswordField layoutX="513.0" layoutY="437.0" prefHeight="25.0" prefWidth="326.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+        <PasswordField fx:id="passwordField" layoutX="513.0" layoutY="437.0" prefHeight="28.0" prefWidth="326.0"
+                       style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff; -fx-text-fill: white;" />
+
+        <Button fx:id="loginButton" layoutX="608.0" layoutY="554.0" mnemonicParsing="false" onAction="#handleLogin"
+                prefHeight="38.0" prefWidth="133.0"
+                style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" text="Login" textFill="WHITE" />
+
+        <Button fx:id="homeButton" layoutX="202.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleHome"
+                style="-fx-text-fill: white; -fx-background-color: #000000;" text="Home">
+            <font><Font size="16.0" /></font>
+        </Button>
+
+        <Button fx:id="klassenButton" layoutX="296.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleKlassen"
+                style="-fx-text-fill: white; -fx-background-color: #000000;" text="Klassenoverzicht">
+            <font><Font size="16.0" /></font>
+        </Button>
     </children>
 </AnchorPane>

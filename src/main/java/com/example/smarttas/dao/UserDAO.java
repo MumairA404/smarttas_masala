@@ -6,6 +6,7 @@ import com.example.smarttas.models.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 
 public class UserDAO {
 
@@ -23,6 +24,24 @@ public class UserDAO {
 
             int rowsInserted = stmt.executeUpdate();
             return rowsInserted > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public static boolean checkLogin(String email, String wachtwoord) {
+        String sql = "SELECT * FROM user WHERE email = ? AND wachtwoord = ?";
+
+        try (Connection conn = Database.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, email);
+            stmt.setString(2, wachtwoord);
+
+            ResultSet rs = stmt.executeQuery();
+
+            return rs.next(); // true als er een record is
 
         } catch (SQLException e) {
             e.printStackTrace();
