@@ -9,6 +9,8 @@ module com.example.smarttas {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.sql;
+    requires com.fazecast.jSerialComm;
+
 
     opens com.example.smarttas to javafx.fxml;
     opens com.example.smarttas.controllers to javafx.fxml;
