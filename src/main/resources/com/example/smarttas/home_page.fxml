@@ -49,5 +49,10 @@
             <Image url="@../../../img/EVI-logo.png" />
          </image>
       </ImageView>
+      <Button fx:id="klassenButton1" layoutX="424.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleKlassen" style="-fx-background-color: #000000;" text="Klas toevoegen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
