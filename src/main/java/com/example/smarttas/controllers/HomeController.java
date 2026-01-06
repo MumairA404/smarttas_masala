@@ -27,7 +27,18 @@ public class HomeController {
 
     @FXML
     private void handleBekijk(){
-        System.out.println("Bekijk geklikt");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/klassenoverzicht.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) bekijkButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("bekijk geklikt");
     }
 
     @FXML
@@ -51,9 +62,19 @@ public class HomeController {
 
         System.out.println("Klassenoverzicht geklikt");
     }
-
     @FXML
     private void handleLogout(){
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/loginpagina.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage) logoutButton.getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         System.out.println("Uitloggen");
     }
 }

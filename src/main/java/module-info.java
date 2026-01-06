@@ -10,6 +10,7 @@ module com.example.smarttas {
     requires eu.hansolo.tilesfx;
     requires java.sql;
     requires com.fazecast.jSerialComm;
+    requires javafx.graphics;
 
 
     opens com.example.smarttas to javafx.fxml;

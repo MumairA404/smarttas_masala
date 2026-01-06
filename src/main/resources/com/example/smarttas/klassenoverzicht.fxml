@@ -25,11 +25,6 @@
             <Font size="16.0" />
          </font></Button>
 
-        <Button fx:id="klassenButton" layoutX="338.0" layoutY="31.0" onAction="#handleKlassen" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-
         <Button fx:id="logoutButton" layoutX="1133.0" layoutY="31.0" onAction="#handleLogout" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #000000;" text="uitloggen" textFill="WHITE">
          <font>
             <Font size="16.0" />
@@ -98,12 +93,13 @@
          <font>
             <Font size="14.0" />
          </font></Button>
-      <Button fx:id="klassenButton1" layoutX="387.0" layoutY="202.0" onAction="#handleKlassen" prefHeight="39.0" prefWidth="202.0" style="-fx-background-color: #000000;" text="VOEG LEERLING TOE" textFill="#6fff00">
-         <font>
+
+    <Button fx:id="klastoevoegenButton" layoutX="672.0" layoutY="198.0" onAction="#handleKlastoevoegen" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: #000000;" text="VOEG KLAS TOE" textFill="#6fff00">
+        <font>
             <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="klassenButton11" layoutX="672.0" layoutY="198.0" onAction="#handleKlassen" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: #000000;" text="VOEG KLAS TOE" textFill="#6fff00">
+        </font>
+    </Button>
+      <Button fx:id="leerlingtoevoegenButton" layoutX="413.0" layoutY="198.0" onAction="#handleleerlingtoevoegen" prefHeight="47.0" prefWidth="202.0" style="-fx-background-color: #000000;" text="VOEG LEELING TOE" textFill="#6fff00">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
