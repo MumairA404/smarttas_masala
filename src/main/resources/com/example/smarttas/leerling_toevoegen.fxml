@@ -48,11 +48,11 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Button layoutX="318.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE">
+      <Button layoutX="318.0" layoutY="22.0" mnemonicParsing="false" onAction="#onKlassenoverzichtClick" style="-fx-background-color: #000000;" text="Klassenoverzicht" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Button layoutX="1158.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Uitloggen" textFill="WHITE">
+      <Button layoutX="1158.0" layoutY="22.0" mnemonicParsing="false" onAction="#onUitloggenClick" style="-fx-background-color: #000000;" text="Uitloggen" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Button>

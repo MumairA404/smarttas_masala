@@ -7,7 +7,7 @@ public class User {
     private String wachtwoord;
     private String geboortedatum; // bv. "YYYY-MM-DD"
 
-    public User(String voornaam, String achternaam, String email, String wachtwoord, String geboortedatum) {
+    public User(int userid, String voornaam, String achternaam, String email, String wachtwoord, String geboortedatum) {
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         this.email = email;

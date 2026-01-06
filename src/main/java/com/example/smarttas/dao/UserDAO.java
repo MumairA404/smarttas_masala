@@ -1,15 +1,15 @@
 package com.example.smarttas.dao;
 
 import com.example.smarttas.database.Database;
-import com.example.smarttas.models.User;
-
+import com.example.smarttas.models.User; // of Docent, afhankelijk van je model
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDAO {
 
+    // Registreer blijft hetzelfde
     public boolean registerUser(User user) {
         String sql = "INSERT INTO user (voornaam, achternaam, email, wachtwoord, geboortedatum) VALUES (?, ?, ?, ?, ?)";
 
@@ -30,7 +30,9 @@ public class UserDAO {
             return false;
         }
     }
-    public static boolean checkLogin(String email, String wachtwoord) {
+
+    // Nieuwe login methode die het volledige User-object teruggeeft
+    public static User login(String email, String wachtwoord) {
         String sql = "SELECT * FROM user WHERE email = ? AND wachtwoord = ?";
 
         try (Connection conn = Database.getConnection();
@@ -41,11 +43,23 @@ public class UserDAO {
 
             ResultSet rs = stmt.executeQuery();
 
-            return rs.next(); // true als er een record is
+            if (rs.next()) {
+                // Maak User/Docent object aan
+                return new User(
+                        rs.getInt("userid"),
+                        rs.getString("voornaam"),
+                        rs.getString("achternaam"),
+                        rs.getString("email"),
+                        rs.getString("wachtwoord"), // evt niet nodig
+                        rs.getString("geboortedatum")
+                );
+            } else {
+                return null; // login mislukt
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
+            return null;
         }
     }
 }

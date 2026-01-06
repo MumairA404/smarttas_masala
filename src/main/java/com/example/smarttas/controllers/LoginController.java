@@ -1,5 +1,7 @@
 package com.example.smarttas.controllers;
 
+import com.example.smarttas.models.User;
+import com.example.smarttas.session.Session;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -9,10 +11,10 @@ import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import java.io.IOException;
 
 import com.example.smarttas.dao.UserDAO;
 
-import java.io.IOException;
 
 
 
@@ -36,28 +38,26 @@ public class LoginController {
     }
 
     @FXML
-    private void handleLogin(){
+    private void handleLogin() {
         String email = emailField.getText();
         String wachtwoord = passwordField.getText();
 
-        boolean valid = UserDAO.checkLogin(email, wachtwoord);
+        User ingelogdeUser = UserDAO.login(email, wachtwoord);
 
-        if (valid) {
+        if (ingelogdeUser != null) {
             // Login geslaagd
-            System.out.println("Login gelukt!");
+            Session.getInstance().setIngelogdeDocent(ingelogdeUser); // opslaan in sessie
 
-            // Optioneel: doorsturen naar hoofdapp scherm
+            // Ga door naar home page
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/home_page.fxml"));
                 Parent root = loader.load();
-
                 Stage stage = (Stage) emailField.getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.show();
-
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+            catch (IOException e) {
+                e.printStackTrace();}
 
         } else {
             // Login mislukt
@@ -68,6 +68,7 @@ public class LoginController {
             alert.showAndWait();
         }
     }
+
 
     @FXML
     private void handleHome (){
