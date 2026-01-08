@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class LeerlingDAO {
 
     public boolean voegToe(Leerling leerling) {
-        String sql = "INSERT INTO leerlingen (voornaam, achternaam, klas, docent) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO leerling (voornaam, achternaam, klas, docent) VALUES (?, ?, ?, ?)";
         int docentId = Session.getInstance().getIngelogdeDocent().getuserid();
 
         try (Connection conn = Database.getConnection();
