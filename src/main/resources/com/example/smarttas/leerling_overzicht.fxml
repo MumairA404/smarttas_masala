@@ -20,7 +20,6 @@
          </image>
       </ImageView>
 
-        
 
         <!-- NAVIGATIE (vervangen door normale JavaFX buttons) -->
         <Button fx:id="homeButton" layoutX="195.0" layoutY="34.0" onAction="#handleHome" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
