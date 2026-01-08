@@ -13,43 +13,46 @@
 <AnchorPane prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttas.controllers.LeerlingstatusController">
     <children>
 
-        <Button layoutX="163.0" layoutY="21.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Home">
+        <Button fx:id="homeButton" layoutX="180.0" layoutY="21.0" onAction="#handleHome" style="-fx-background-color: black; -fx-text-fill: white;" text="Home">
          <font>
             <Font size="16.0" />
          </font></Button>
-        <Button layoutX="254.0" layoutY="21.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Klassenoverzicht">
+
+        <Button fx:id="klassenButton" layoutX="267.0" layoutY="21.0" onAction="#handleKlassen" style="-fx-background-color: black; -fx-text-fill: white;" text="Klassenoverzicht">
          <font>
             <Font size="16.0" />
          </font></Button>
-        <Button layoutX="1180.0" layoutY="21.0" style="-fx-background-color: black; -fx-text-fill: white;" text="Uitloggen">
+
+        <Button fx:id="logoutButton" layoutX="1180.0" layoutY="21.0" onAction="#handleLogout" style="-fx-background-color: black; -fx-text-fill: white;" text="Uitloggen">
          <font>
             <Font size="16.0" />
          </font></Button>
+
 
         <Text fill="WHITE" fontSmoothingType="LCD" layoutX="560.0" layoutY="202.0" style="-fx-font-weight: bold;" text="WEEKSTATUS" textAlignment="CENTER">
             <font>
                 <Font size="25.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="185.0" layoutY="276.0" style="-fx-font-weight: bold;" text="MA">
+        <Text fill="WHITE" layoutX="204.0" layoutY="276.0" style="-fx-font-weight: bold;" text="MA">
          <font>
             <Font size="19.0" />
          </font></Text>
 
         <Rectangle fill="#28a745" height="29.0" layoutX="185.0" layoutY="281.0" style="-fx-arc-height: 9; -fx-arc-width: 9;" width="69.0" />
-        <Text fill="WHITE" layoutX="400.0" layoutY="276.0" style="-fx-font-weight: bold;" text="DI">
+        <Text fill="WHITE" layoutX="424.0" layoutY="276.0" style="-fx-font-weight: bold;" text="DI">
          <font>
             <Font size="19.0" />
          </font></Text>
-        <Text fill="WHITE" layoutX="606.0" layoutY="276.0" style="-fx-font-weight: bold;" text="WO">
+        <Text fill="WHITE" layoutX="623.0" layoutY="276.0" style="-fx-font-weight: bold;" text="WO">
          <font>
             <Font size="19.0" />
          </font></Text>
-        <Text fill="WHITE" layoutX="822.0" layoutY="276.0" style="-fx-font-weight: bold;" text="DO">
+        <Text fill="WHITE" layoutX="842.0" layoutY="276.0" style="-fx-font-weight: bold;" text="DO">
          <font>
             <Font size="19.0" />
          </font></Text>
-        <Text fill="WHITE" layoutX="1018.0" layoutY="276.0" style="-fx-font-weight: bold;" text="VR">
+        <Text fill="WHITE" layoutX="1040.0" layoutY="276.0" style="-fx-font-weight: bold;" text="VR">
          <font>
             <Font size="19.0" />
          </font></Text>
@@ -63,7 +66,7 @@
          <image>
             <Image url="@../../../img/EVI-logo.png" />
          </image></ImageView>
-        <Text fill="WHITE" layoutX="195.0" layoutY="134.0" text="SmartTas van [LEERLING]">
+        <Text fill="WHITE" layoutX="496.0" layoutY="134.0" text="SmartTas van [LEERLING]">
             <font>
                 <Font name="System Bold" size="25.0" />
             </font>
