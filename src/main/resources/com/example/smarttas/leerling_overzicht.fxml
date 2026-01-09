@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarttas.controllers.LeerlingoverzichtController">
+    <children>
+        <Text fill="WHITE" layoutX="408.0" layoutY="146.0" text="LEERLINGEN OVERZICHT">
+            <font>
+                <Font name="System Bold" size="40.0" />
+            </font>
+        </Text>
+      <ImageView fitHeight="178.0" fitWidth="176.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/EVI-logo.png" />
+         </image>
+      </ImageView>
+
+        
+
+        <Button fx:id="homeButton" layoutX="195.0" layoutY="34.0" onAction="#handleHome" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+
+        <Button fx:id="klassenButton" layoutX="301.0" layoutY="34.0" onAction="#handleKlassen" prefHeight="36.0" prefWidth="145.0" style="-fx-background-color: #000000;" text="klassenoverzicht" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+
+        <Button fx:id="logoutButton" layoutX="1144.0" layoutY="28.0" onAction="#handleLogout" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #000000;" text="uitloggen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+
+        <Text fill="WHITE" layoutX="920.0" layoutY="242.0" text="Aanwezigheid/SmartTas">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Text>
+
+        <Text fill="WHITE" layoutX="587.0" layoutY="242.0" text="achternaam">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Text>
+
+        <Text fill="WHITE" layoutX="172.0" layoutY="242.0" text="voornaam">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Text>
+
+        <Text fill="WHITE" layoutX="600.0" layoutY="197.0" text="klas: 8A">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Text>
+
+        <Text fx:id="leerling1Voornaam" fill="WHITE" layoutX="191.0" layoutY="314.0" text="Pieter">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+        <Text fx:id="leerling1Achternaam" fill="WHITE" layoutX="626.0" layoutY="313.0" text="Jan">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+
+        <Text fx:id="leerling2Voornaam" fill="WHITE" layoutX="196.0" layoutY="411.0" text="Kees">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+        <Text fx:id="leerling2Achternaam" fill="WHITE" layoutX="582.0" layoutY="411.0" text="Van der Spek">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+
+        <Text fx:id="leerling3Voornaam" fill="WHITE" layoutX="196.0" layoutY="498.0" text="Imran">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+        <Text fx:id="leerling3Achternaam" fill="WHITE" layoutX="618.0" layoutY="498.0" text="Khan">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+
+        <Text fx:id="leerling4Voornaam" fill="WHITE" layoutX="196.0" layoutY="610.0" text="Olivia">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+        <Text fx:id="leerling4Achternaam" fill="WHITE" layoutX="581.0" layoutY="610.0" text="van der Veen">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+
+
+        <Text fill="#6fff00" layoutX="130.0" layoutY="195.0" text="VOEG LEERLING TOE">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Text>
+
+        <Button fx:id="bekijkButton1" layoutX="970.0" layoutY="291.0" onAction="#handleBekijk1" prefHeight="28.0" prefWidth="118.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+        <Button fx:id="bekijkButton2" layoutX="970.0" layoutY="389.0" onAction="#handleBekijk2" prefHeight="28.0" prefWidth="118.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+        <Button fx:id="bekijkButton3" layoutX="970.0" layoutY="476.0" onAction="#handleBekijk3" prefHeight="28.0" prefWidth="118.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+        <Button fx:id="bekijkButton4" layoutX="970.0" layoutY="588.0" onAction="#handleBekijk4" prefHeight="28.0" prefWidth="118.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="bekijk" textFill="WHITE" />
+    </children>
+</AnchorPane>
