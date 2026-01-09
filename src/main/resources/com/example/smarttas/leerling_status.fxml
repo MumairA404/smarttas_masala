@@ -78,7 +78,7 @@
         <Rectangle fill="#28a745" height="29.0" layoutX="822.0" layoutY="281.0" style="-fx-arc-height: 9; -fx-arc-width: 9;" width="69.0" />
         <Rectangle fill="#28a745" height="29.0" layoutX="1018.0" layoutY="281.0" style="-fx-arc-height: 9; -fx-arc-width: 9;" width="69.0" />
         <Line endX="1011.833251953125" layoutX="271.0" layoutY="365.0" startX="-266.0" startY="1.52587890625E-5" stroke="#78a0ff" strokeWidth="3.6" />
-        <Label contentDisplay="TOP" layoutX="560.0" layoutY="511.0" style="-fx-background-color: #dc3545; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-radius: 5; -fx-pref-height: 24; -fx-pref-width: 160; -fx-alignment: center;" text="Telefoon zit NIET in de tas" textFill="WHITE" />
-        <Label contentDisplay="TOP" layoutX="560.0" layoutY="571.0" prefHeight="39.0" prefWidth="201.0" style="-fx-background-color: #28a745; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-radius: 5; -fx-pref-height: 24; -fx-pref-width: 160; -fx-alignment: center;" text="Telefoon zit in de tas" textFill="WHITE" />
+        <Label fx:id="labelNietInTas" contentDisplay="TOP" layoutX="560.0" layoutY="511.0" style="-fx-background-color: #dc3545; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-radius: 5; -fx-pref-height: 24; -fx-pref-width: 160; -fx-alignment: center;" text="Telefoon zit NIET in de tas" textFill="WHITE" />
+        <Label fx:id="labelInTas" contentDisplay="TOP" layoutX="560.0" layoutY="571.0" prefHeight="39.0" prefWidth="201.0" style="-fx-background-color: #28a745; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-radius: 5; -fx-pref-height: 24; -fx-pref-width: 160; -fx-alignment: center;" text="Telefoon zit in de tas" textFill="WHITE" />
     </children>
 </AnchorPane>
