@@ -1,8 +1,13 @@
 package com.example.smarttas.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class KlastoevoegenController {
 
@@ -28,9 +33,9 @@ public class KlastoevoegenController {
     public void initialize() {
         System.out.println("Klas toevoegen scherm geladen");
     }
+
     @FXML
     private void onToevoegenClick() {
-
         String klasNaam = klasNaamField.getText();
         String aantalLeerlingen = aantalLeerlingenField.getText();
 
@@ -38,16 +43,36 @@ public class KlastoevoegenController {
         System.out.println("Naam: " + klasNaam);
         System.out.println("Aantal leerlingen: " + aantalLeerlingen);
     }
+
     @FXML
     private void onHomeClick() {
+        openPage("/com/example/smarttas/home_page.fxml");
         System.out.println("Home geklikt");
     }
+
     @FXML
     private void onKlassenoverzichtClick() {
+        openPage("/com/example/smarttas/klassenoverzicht.fxml");
         System.out.println("Klassenoverzicht geklikt");
     }
+
     @FXML
     private void onUitloggenClick() {
+        openPage("/com/example/smarttas/loginpagina.fxml");
         System.out.println("Uitloggen geklikt");
+    }
+
+    private void openPage(String fxmlPath) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) homeButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -43,9 +43,9 @@
             </font>
         </Text>
 
-        <TextField fx:id="klasNaamField" layoutX="556.0" layoutY="282.0" prefHeight="28.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" />
+        <TextField fx:id="klasNaamField" layoutX="556.0" layoutY="282.0" prefHeight="28.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px; -fx-text-fill: white;" />
 
-        <TextField fx:id="aantalLeerlingenField" layoutX="556.0" layoutY="426.0" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px;" />
+        <TextField fx:id="aantalLeerlingenField" layoutX="556.0" layoutY="426.0" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #2b2b2b; -fx-border-color: #78a0ff; -fx-border-radius: 5px; -fx-text-fill: white;" />
 
         <Text fill="WHITE" layoutX="556.0" layoutY="402.0" text="Aantal leerlingen">
             <font>

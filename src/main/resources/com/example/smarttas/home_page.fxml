@@ -14,8 +14,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="540.8514404296875">
-         <font>
+       <Text fx:id="welkomText" fill="WHITE" layoutX="369.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welkom [NAAM] bij de overzicht van SmartTas " wrappingWidth="540.8514404296875">         <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Text>
@@ -29,10 +28,6 @@
             <Font size="19.0" />
          </font>
       </Text>
-      <Button fx:id="bekijkButton" layoutX="369.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleBekijk" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Bekijk" textFill="WHITE">
-         <font>
-            <Font size="17.0" />
-         </font></Button>
       <Button fx:id="homeButton" layoutX="173.0" layoutY="34.0" mnemonicParsing="false" onAction="#handleHome" style="-fx-background-color: #000000;" text="Home" textFill="WHITE">
          <font>
             <Font size="16.0" />
@@ -50,5 +45,10 @@
             <Image url="@../../../img/EVI-logo.png" />
          </image>
       </ImageView>
+      <Button fx:id="bekijkButton" layoutX="369.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleBekijk" prefHeight="38.0" prefWidth="120.0" style="-fx-background-color: #2b2b2b; -fx-border-radius: 5px; -fx-border-color: #78a0ff;" text="Bekijk" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
