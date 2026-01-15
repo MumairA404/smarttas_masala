@@ -11,6 +11,7 @@ module com.example.smarttas {
     requires java.sql;
     requires com.fazecast.jSerialComm;
     requires javafx.graphics;
+    requires java.desktop;
 
 
     opens com.example.smarttas to javafx.fxml;

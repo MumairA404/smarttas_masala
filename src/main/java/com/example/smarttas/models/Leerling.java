@@ -1,7 +1,7 @@
 package com.example.smarttas.models;
 
 public class Leerling {
-    private int id; // id uit de database, 0 als nog niet opgeslagen
+    private int leerlingnr; // id uit de database, 0 als nog niet opgeslagen
     private String voornaam;
     private String achternaam;
     private String klas;
@@ -13,15 +13,15 @@ public class Leerling {
     }
 
     public Leerling(int id, String voornaam, String achternaam, String klas) {
-        this.id = id;
+        this.leerlingnr = id;
         this.voornaam = voornaam;
         this.achternaam = achternaam;
         this.klas = klas;
     }
 
     // Getters en setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() { return leerlingnr; }
+    public void setId(int id) { this.leerlingnr = id; }
 
     public String getVoornaam() { return voornaam; }
     public void setVoornaam(String voornaam) { this.voornaam = voornaam; }

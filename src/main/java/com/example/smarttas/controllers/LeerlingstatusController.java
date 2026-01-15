@@ -2,6 +2,7 @@ package com.example.smarttas.controllers;
 
 import com.example.smarttas.session.Session;
 import com.example.smarttas.dao.SensorStatusDAO;
+import com.example.smarttas.models.Leerling;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -20,11 +22,23 @@ public class LeerlingstatusController {
     @FXML private Button logoutButton;
     @FXML private Label labelNietInTas;
     @FXML private Label labelInTas;
+    @FXML private Text leerlingText;
+    private Leerling leerling;
 
     @FXML
     public void initialize() {
-        updateStatus();
+        // hier NIETS doen met leerling
     }
+
+    public void setLeerling(Leerling leerling) {
+        this.leerling = leerling;
+        leerlingText.setText(
+            "SmartTas van " + leerling.getVoornaam() + " " + leerling.getAchternaam()
+        );
+        updateStatus(); // 👈 HIER
+    }
+
+
 
     private void updateStatus() {
 

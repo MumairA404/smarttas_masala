@@ -3,6 +3,7 @@ package com.example.smarttas.controllers;
 import com.example.smarttas.dao.LeerlingDAO;
 import com.example.smarttas.models.Leerling;
 import com.example.smarttas.session.Session;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

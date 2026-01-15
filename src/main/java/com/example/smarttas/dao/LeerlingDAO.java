@@ -35,14 +35,14 @@ public class LeerlingDAO {
     public List<Leerling> getLeerlingenByKlas(String klas) {
         List<Leerling> leerlingen = new ArrayList<>();
         // hier database query
-        String sql = "SELECT * FROM leerlingen WHERE klas = ?";
+        String sql = "SELECT * FROM leerling WHERE klas = ?";
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, klas);
             ResultSet rs = stmt.executeQuery();
             while(rs.next()) {
                 leerlingen.add(new Leerling(
-                        rs.getInt("id"),
+                        rs.getInt("leerlingnr"),
                         rs.getString("voornaam"),
                         rs.getString("achternaam"),
                         rs.getString("klas")

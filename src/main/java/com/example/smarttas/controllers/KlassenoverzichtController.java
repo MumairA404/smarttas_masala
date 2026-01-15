@@ -155,11 +155,11 @@ public class KlassenoverzichtController {
 
     private void openLeerlingOverzicht(String klasNaam) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/leerlingoverzicht.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/leerling_overzicht.fxml"));
             Parent root = loader.load();
 
-            //LeerlingoverzichtController controller = loader.getController();
-            //controller.setGeselecteerdeKlas(klasNaam); // stuur de gekozen klas door
+            LeerlingoverzichtController controller = loader.getController();
+           controller.setGeselecteerdeKlas(klasNaam); // stuur de gekozen klas door
 
             Stage stage = (Stage) klassenVBox.getScene().getWindow();
             stage.setScene(new Scene(root));
