@@ -1,7 +1,9 @@
 package com.example.smarttas.dao;
 
 import com.example.smarttas.database.Database;
-import com.example.smarttas.models.User; // of Docent, afhankelijk van je model
+import com.example.smarttas.models.User;
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +11,7 @@ import java.sql.SQLException;
 
 public class UserDAO {
 
-    // Registreer blijft hetzelfde
+    // REGISTREREN – blijft hetzelfde
     public boolean registerUser(User user) {
         String sql = "INSERT INTO user (voornaam, achternaam, email, wachtwoord, geboortedatum) VALUES (?, ?, ?, ?, ?)";
 
@@ -19,11 +21,10 @@ public class UserDAO {
             stmt.setString(1, user.getVoornaam());
             stmt.setString(2, user.getAchternaam());
             stmt.setString(3, user.getEmail());
-            stmt.setString(4, user.getWachtwoord());
+            stmt.setString(4, user.getWachtwoord()); // ← gehashte versie
             stmt.setString(5, user.getGeboortedatum());
 
-            int rowsInserted = stmt.executeUpdate();
-            return rowsInserted > 0;
+            return stmt.executeUpdate() > 0;
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -31,35 +32,38 @@ public class UserDAO {
         }
     }
 
-    // Nieuwe login methode die het volledige User-object teruggeeft
-    public static User login(String email, String wachtwoord) {
-        String sql = "SELECT * FROM user WHERE email = ? AND wachtwoord = ?";
+    // LOGIN – AANGEPAST VOOR HASHING
+    public static User login(String email, String ingevoerdWachtwoord) {
+
+        String sql = "SELECT * FROM user WHERE email = ?";
 
         try (Connection conn = Database.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, email);
-            stmt.setString(2, wachtwoord);
-
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                // Maak User/Docent object aan
-                return new User(
-                        rs.getInt("userid"),
-                        rs.getString("voornaam"),
-                        rs.getString("achternaam"),
-                        rs.getString("email"),
-                        rs.getString("wachtwoord"), // evt niet nodig
-                        rs.getString("geboortedatum")
-                );
-            } else {
-                return null; // login mislukt
+                String hashedPassword = rs.getString("wachtwoord");
+
+                // 🔐 HASH VERGELIJKEN
+                if (BCrypt.checkpw(ingevoerdWachtwoord, hashedPassword)) {
+
+                    return new User(
+                            rs.getInt("userid"),
+                            rs.getString("voornaam"),
+                            rs.getString("achternaam"),
+                            rs.getString("email"),
+                            hashedPassword, // mag, maar niet nodig
+                            rs.getString("geboortedatum")
+                    );
+                }
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return null;
         }
+
+        return null; // login mislukt
     }
 }

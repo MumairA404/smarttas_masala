@@ -3,6 +3,7 @@ package com.example.smarttas.controllers;
 import com.example.smarttas.models.Klas;
 import com.example.smarttas.dao.KlasDAO;
 
+import com.example.smarttas.session.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -98,6 +99,7 @@ public class KlassenoverzichtController {
 
     @FXML
     private void handleLogout() {
+        Session.getInstance().clear();
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/loginpagina.fxml"));
             Parent root = loader.load();

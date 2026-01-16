@@ -12,6 +12,7 @@ module com.example.smarttas {
     requires com.fazecast.jSerialComm;
     requires javafx.graphics;
     requires java.desktop;
+    requires jbcrypt;
 
 
     opens com.example.smarttas to javafx.fxml;

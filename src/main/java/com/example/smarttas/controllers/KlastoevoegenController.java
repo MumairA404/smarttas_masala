@@ -1,5 +1,6 @@
 package com.example.smarttas.controllers;
 
+import com.example.smarttas.session.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -58,6 +59,7 @@ public class KlastoevoegenController {
 
     @FXML
     private void onUitloggenClick() {
+        Session.getInstance().clear();
         openPage("/com/example/smarttas/loginpagina.fxml");
         System.out.println("Uitloggen geklikt");
     }

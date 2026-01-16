@@ -2,6 +2,7 @@
 
     import com.example.smarttas.dao.LeerlingDAO;
     import com.example.smarttas.models.Leerling;
+    import com.example.smarttas.session.Session;
     import javafx.fxml.FXML;
 
     import javafx.scene.control.Button;
@@ -83,6 +84,7 @@
         }
 
         @FXML private void handleLogout() {
+            Session.getInstance().clear();
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/loginpagina.fxml"));
                 Parent root = loader.load();

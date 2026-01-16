@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import java.io.IOException;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 
 public class RegisterController {
 
@@ -59,24 +61,37 @@ public class RegisterController {
     }
 
     @FXML
-    private void handleRegister(){
+    private void handleRegister() {
         System.out.println("Button geklikt");
 
         String voornaam = voornaamField.getText();
         String achternaam = achternaamField.getText();
         String email = emailField.getText();
-        String wachtwoord = wachtwoordField.getText();
-        String geboortedatum = jaarField.getText() + "-" + maandField.getText() + "-" + dagField.getText(); // YYYY-MM-DD
+        String rawPassword = wachtwoordField.getText();
 
-        User newUser = new User(voornaam, achternaam, email, wachtwoord, geboortedatum);
+        String geboortedatum =
+                jaarField.getText() + "-" +
+                        maandField.getText() + "-" +
+                        dagField.getText();
+
+        // 🔐 WACHTWOORD HASHEN
+        String hashedPassword = BCrypt.hashpw(rawPassword, BCrypt.gensalt(12));
+
+        User newUser = new User(
+                voornaam,
+                achternaam,
+                email,
+                hashedPassword,
+                geboortedatum
+        );
+
         UserDAO userDAO = new UserDAO();
-
         boolean success = userDAO.registerUser(newUser);
+
         if (success) {
             System.out.println("Registratie gelukt!");
             clearAll();
             gaNaarLogin();
-
         } else {
             System.out.println("Registratie mislukt...");
         }

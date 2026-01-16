@@ -27,7 +27,7 @@ public class LeerlingstatusController {
 
     @FXML
     public void initialize() {
-        // hier NIETS doen met leerling
+        System.out.println("Leerling status is ingeladen");
     }
 
     public void setLeerling(Leerling leerling) {
@@ -35,26 +35,32 @@ public class LeerlingstatusController {
         leerlingText.setText(
             "SmartTas van " + leerling.getVoornaam() + " " + leerling.getAchternaam()
         );
-        updateStatus(); // 👈 HIER
+        updateStatus();
     }
 
 
 
     private void updateStatus() {
 
-        SensorStatusDAO dao = new SensorStatusDAO();
-        Boolean telefoonInTas = dao.isTelefoonInTasVoorLeerling(2);
+        labelInTas.setVisible(false);
+        labelNietInTas.setVisible(false);
+
+        Boolean telefoonInTas =
+                new SensorStatusDAO().isTelefoonInTasVoorLeerling(2);
 
         if (telefoonInTas == null) {
-            labelInTas.setVisible(false);
-            labelNietInTas.setVisible(true);
             labelNietInTas.setText("Geen SmartTas gekoppeld");
+            labelNietInTas.setVisible(true);
             return;
         }
 
-        labelInTas.setVisible(telefoonInTas);
-        labelNietInTas.setVisible(!telefoonInTas);
+        if (telefoonInTas) {
+            labelInTas.setVisible(true);
+        } else {
+            labelNietInTas.setVisible(true);
+        }
     }
+
 
     @FXML
     private void handleHome() {

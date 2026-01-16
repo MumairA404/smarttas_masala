@@ -1,5 +1,6 @@
 package com.example.smarttas.controllers;
 
+import com.example.smarttas.session.Session;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
@@ -22,7 +23,8 @@ public class HomeController {
 
     @FXML
     public void initialize(){
-        welkomText.setText("Welkom Jan bij de overzicht van SmartTas");
+        String docentnaam = Session.getInstance().getIngelogdeDocent().getVoornaam();
+        welkomText.setText("Welkom " + docentnaam + " bij de overzicht van SmartTas");
     }
 
     @FXML
@@ -64,6 +66,7 @@ public class HomeController {
     }
     @FXML
     private void handleLogout(){
+        Session.getInstance().clear();
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/loginpagina.fxml"));
                 Parent root = loader.load();

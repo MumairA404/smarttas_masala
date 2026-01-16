@@ -101,10 +101,10 @@ public class LeerlingtoevoegenController {
 
     @FXML
     private void onUitloggenClick() {
-        // 1. Sessie resetten
+        //session clear
         Session.getInstance().clear();
 
-        // 2. Terug naar loginpagina
+        // naar loginpagina
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/smarttas/loginpagina.fxml"));
             Parent root = loader.load();
