@@ -20,6 +20,25 @@ import com.example.smarttas.dao.UserDAO;
 
 public class LoginController {
 
+    private boolean checkLogin() {
+
+        if (Session.getInstance().getIngelogdeDocent() == null) {
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Toegang geweigerd");
+            alert.setHeaderText("Niet ingelogd");
+            alert.setContentText(
+                    "Je hebt alleen toegang tot deze pagina als je bent ingelogd."
+            );
+            alert.showAndWait();
+
+            return false;
+        }
+
+        return true;
+    }
+
+
 
     @FXML private TextField emailField;
     @FXML private TextField passwordField;
@@ -72,10 +91,20 @@ public class LoginController {
 
     @FXML
     private void handleHome (){
-        System.out.println("Home geklikt");
+
+            if (!checkLogin()) {
+                return;
+            }
+
+            System.out.println("Home geklikt");
+
+
     }
     @FXML
     private void handleKlassen() {
+        if (!checkLogin()) {
+            return;
+        }
         System.out.println("Klassenoverzicht geklikt");
     }
 }

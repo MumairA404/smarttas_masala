@@ -32,7 +32,6 @@ public class UserDAO {
         }
     }
 
-    // LOGIN – AANGEPAST VOOR HASHING
     public static User login(String email, String ingevoerdWachtwoord) {
 
         String sql = "SELECT * FROM user WHERE email = ?";
@@ -43,27 +42,59 @@ public class UserDAO {
             stmt.setString(1, email);
             ResultSet rs = stmt.executeQuery();
 
-            if (rs.next()) {
-                String hashedPassword = rs.getString("wachtwoord");
+            if (!rs.next()) {
+                return null; // gebruiker niet gevonden
+            }
 
-                // 🔐 HASH VERGELIJKEN
-                if (BCrypt.checkpw(ingevoerdWachtwoord, hashedPassword)) {
+            String dbWachtwoord = rs.getString("wachtwoord");
+            boolean loginGeslaagd = false;
 
-                    return new User(
-                            rs.getInt("userid"),
-                            rs.getString("voornaam"),
-                            rs.getString("achternaam"),
-                            rs.getString("email"),
-                            hashedPassword, // mag, maar niet nodig
-                            rs.getString("geboortedatum")
+            // 1️⃣ NIEUW: bcrypt-wachtwoord
+            if (dbWachtwoord != null && dbWachtwoord.startsWith("$2")) {
+                loginGeslaagd = BCrypt.checkpw(ingevoerdWachtwoord, dbWachtwoord);
+            }
+            // 2️⃣ OUD: plain text wachtwoord
+            else {
+                loginGeslaagd = ingevoerdWachtwoord.equals(dbWachtwoord);
+
+                // 🔄 MIGRATIE NAAR BCRYPT
+                if (loginGeslaagd) {
+                    String nieuwHash = BCrypt.hashpw(
+                            ingevoerdWachtwoord,
+                            BCrypt.gensalt(12)
                     );
+
+                    String updateSql =
+                            "UPDATE user SET wachtwoord = ? WHERE userid = ?";
+
+                    try (PreparedStatement updateStmt =
+                                 conn.prepareStatement(updateSql)) {
+
+                        updateStmt.setString(1, nieuwHash);
+                        updateStmt.setInt(2, rs.getInt("userid"));
+                        updateStmt.executeUpdate();
+                    }
                 }
             }
 
+            if (!loginGeslaagd) {
+                return null;
+            }
+
+            // Login geslaagd → User object teruggeven
+            return new User(
+                    rs.getInt("userid"),
+                    rs.getString("voornaam"),
+                    rs.getString("achternaam"),
+                    rs.getString("email"),
+                    rs.getString("wachtwoord"), // inmiddels bcrypt
+                    rs.getString("geboortedatum")
+            );
+
         } catch (SQLException e) {
             e.printStackTrace();
+            return null;
         }
-
-        return null; // login mislukt
     }
+
 }
